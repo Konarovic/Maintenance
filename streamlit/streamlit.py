@@ -11,14 +11,7 @@ st.set_page_config(
 
 # Page title
 st.title('Maintenance - Failure Prediction')
-#st.image('images/maintenance.jpg')
 st.write("\n\n")
-
-st.markdown(
-    """
-    This app aims to assist in classifying failures, thereby reducing the time required to analyze machine problems. It enables the analysis of sensor data to classify failures swiftly and expedite the troubleshooting process.    
-    """
-)
 
 # Load the model
 with open('../model/random_forest_model.pkl', 'rb') as model_file:
