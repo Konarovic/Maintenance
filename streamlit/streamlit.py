@@ -11,7 +11,7 @@ st.set_page_config(
 
 # Page title
 st.title('Maintenance - Failure Prediction')
-st.image('images/maintenance.jpg')
+#st.image('images/maintenance.jpg')
 st.write("\n\n")
 
 st.markdown(
