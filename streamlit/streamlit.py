@@ -1,6 +1,9 @@
 import pickle
 import streamlit as st
 import pandas as pd
+import os
+
+MODEL_PATH = os.path.join(os.path.dirname(__file__), '..', 'model', 'lgbmc_model.pkl')
 
 
 # Page 
@@ -15,7 +18,6 @@ with col3:
 st.write("\n\n")
 
 
-# chargement du modele
-
-with open('../model/lgbmc_model.pkl', 'rb') as model_file:
+# chargement du model
+with open(MODEL_PATH, 'rb') as model_file:
     model = pickle.load(model_file)
