@@ -21,7 +21,7 @@ st.markdown(
 )
 
 # Load the model
-with open('model/model.pkl', 'rb') as model_file:
+with open('model/random_forest_model.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
 # Streamlit interface to input data
