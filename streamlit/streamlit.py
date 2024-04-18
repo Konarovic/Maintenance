@@ -17,5 +17,5 @@ st.write("\n\n")
 
 # chargement du modele
 
-with open('../model/lgbmc.pkl', 'rb') as model_file:
+with open('../model/lgbmc_model.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
