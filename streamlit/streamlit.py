@@ -13,6 +13,4 @@ st.set_page_config(
 st.title('Maintenance - Failure Prediction')
 st.write("\n\n")
 
-# Load the model
-with open('../model/random_forest_model.pkl', 'rb') as model_file:
-    model = pickle.load(model_file)
+
