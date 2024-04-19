@@ -15,6 +15,12 @@ with col3:
 st.write("\n\n")
 
 
-# chargement du model
-with open('lgbmc_model.pkl', 'rb') as file:
-    model = pickle.load(file)
+
+# load
+import joblib
+
+# Load the LightGBM model
+lgbmc_loaded_model = joblib.load('lgbmc_model.pkl')
+
+# Now you can use lgbmc_loaded_model for predictions
+
