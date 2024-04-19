@@ -2,11 +2,6 @@
 import pickle
 import streamlit as st
 import pandas as pd
-import joblib
-import os
-
-MODEL_PATH = os.path.join(os.path.dirname(__file__), '..', 'model', 'lgbmc_model.joblib')
-
 
 # Page 
 st.title('Maintenance')
@@ -21,5 +16,5 @@ st.write("\n\n")
 
 
 # chargement du model
-with open(MODEL_PATH, 'rb') as model_file:
-    model = joblib.load(model_file)
+with open('lgbmc_model.pkl', 'rb') as file:
+    model = pickle.load(file)
