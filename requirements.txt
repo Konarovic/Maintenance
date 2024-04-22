@@ -2,4 +2,4 @@ streamlit
 joblib
 numpy
 sklearn
-lightgbm
+lightgbm==4.3.0
