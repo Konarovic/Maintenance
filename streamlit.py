@@ -36,7 +36,7 @@ if option == '1 / Prédictions':
     col1,col2 = st.columns(2)
 
     with col1 :
-        air = st.number_input(label='Air Temperature')
+        air = st.number_input(label='Air Temperature', step=1)
         process = st.number_input(label='Process Temperature')
         rpm = st.number_input(label='Rotational Speed')
 
