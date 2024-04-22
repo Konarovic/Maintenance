@@ -2,6 +2,7 @@
 import pickle
 import streamlit as st
 import pandas as pd
+import joblib
 
 # Page 
 
@@ -16,5 +17,8 @@ with col3:
 st.write("\n\n")
 
 
+# import model
 
+# Charger le modèle
+lgbmc_model = joblib.load('../notebook/lgbmc_model.pkl')
 
