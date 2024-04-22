@@ -36,13 +36,13 @@ if option == '1 / Prédictions':
     col1,col2 = st.columns(2)
 
     with col1 :
-        air = st.number_input(label='Air Temperature', step=1)
-        process = st.number_input(label='Process Temperature')
-        rpm = st.number_input(label='Rotational Speed')
+        air = st.number_input(label='Air Temperature[K]', step=0.1)
+        process = st.number_input(label='Process Temperature[K]', step=0.1)
+        rpm = st.number_input(label='Rotational Speed[rpm]', step=5)
 
     with col2:
-        torque = st.number_input(label='Torque')
-        tool_wear = st.number_input(label='Tool Wear')
+        torque = st.number_input(label='Torque', step=0.1)
+        tool_wear = st.number_input(label='Tool Wear', step=1)
         type = st.selectbox(label='Type', options=['Low', 'Medium', 'High'])
 
 # Page 2
