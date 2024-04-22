@@ -1,4 +1,3 @@
-
 import joblib
 import streamlit as st
 import pandas as pd
@@ -23,3 +22,5 @@ option = st.sidebar.selectbox(
 )
 
 
+#impoprt du modele
+lgbmc_model = joblib.load('lgbmc_model.pkl')
