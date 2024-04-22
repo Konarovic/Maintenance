@@ -19,7 +19,7 @@ st.write("\n\n")
 
 option = st.sidebar.selectbox(
     'Menu',
-    ('Predictions', 'Details model')
+    ('1_Predictions', '2_Details du modele')
 )
 
 
