@@ -23,4 +23,4 @@ option = st.sidebar.selectbox(
 
 
 #impoprt du modele
-lgbmc_model = joblib.load('lgbmc_model.pkl')
+lgbmc_model = joblib.load('./model/lgbmc_model.pkl')
