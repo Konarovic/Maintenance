@@ -68,12 +68,13 @@ if option == '1 / Prédictions':
 
 # Botton to predict
 st.markdown('WIP !!!!')
-if st.button('Predict'):
+if st.button('Predict (WIP)'):
     predict = prediction(air, process, rpm, torque, tool_wear, type)
     st.success(predict)
 
 # Page 2
 elif option == '2 / Détails du modèle':
     st.write('wip')
+    st.dataframe('./data/maintenance_data_clean.csv')
   
 
