@@ -75,8 +75,8 @@ if option == '1 / Prédictions':
 # Page 2
 elif option == '2 / Détails du modèle':
     st.write('wip')
-    
+
     df = pd.read_csv('./data/maintenance_data_clean.csv')
-    st.dataframe(df)
+    st.dataframe(data=df)
   
 
