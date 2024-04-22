@@ -25,5 +25,5 @@ option = st.sidebar.selectbox(
 
 
 # Charger le modèle
-lgbmc_model = joblib.load('../notebook/lgbmc_model.pkl')
+lgbmc_model = joblib.load('lgbmc_model.pkl')
 
