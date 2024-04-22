@@ -17,11 +17,13 @@ with col3:
 st.write("\n\n")
 
 
-# import model
+option = st.sidebar.selectbox(
+    'Menu',
+    ('Predictions', 'Details model')
+)
+
+
 
 # Charger le modèle
 lgbmc_model = joblib.load('../notebook/lgbmc_model.pkl')
 
-with st.sidebar:
-    st.[Model]
-    st.[Model details]
