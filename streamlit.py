@@ -41,8 +41,8 @@ if option == '1 / Prédictions':
         rpm = st.number_input(label='Rotational Speed[rpm]', step=5)
 
     with col2:
-        torque = st.number_input(label='Torque', step=0.1)
-        tool_wear = st.number_input(label='Tool Wear', step=1)
+        torque = st.number_input(label='Torque[3-80]', step=0.1)
+        tool_wear = st.number_input(label='Tool Wear[0-260]', step=1)
         type = st.selectbox(label='Type', options=['Low', 'Medium', 'High'])
 
 # Page 2
