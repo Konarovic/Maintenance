@@ -1,5 +1,5 @@
 
-
+import joblib
 import streamlit as st
 import pandas as pd
 
@@ -18,8 +18,8 @@ st.write("\n\n")
 
 
 option = st.sidebar.selectbox(
-    'Menu',
-    ('1_Predictions', '2_Details du modele')
+    'Navigation',
+    ('1 / Prédictions', '2 / Details du modèle')
 )
 
 
