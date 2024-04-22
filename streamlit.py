@@ -30,20 +30,25 @@ option = st.sidebar.selectbox(
 
 
 # Page 1
+
+"""
+pour correspondance temperature degrés en kelvin = degrés + 293.15
+"""
+
 if option == '1 / Prédictions':
     st.write('Tableau de prédictions')
    
     col1,col2 = st.columns(2)
 
     with col1 :
-        air = st.number_input(label='Air Temperature[K]', step=0.1)
-        process = st.number_input(label='Process Temperature[K]', step=0.1)
-        rpm = st.number_input(label='Rotational Speed[rpm]', step=5)
+        air = st.number_input(label='Temperature de l air', step=0.1) 
+        process = st.number_input(label='Temperature de fonctionnement[K]', step=0.1)
+        rpm = st.number_input(label='Vitesse de rotation[rpm]', step=5)
 
     with col2:
-        torque = st.number_input(label='Torque[3-80]', step=0.1)
-        tool_wear = st.number_input(label='Tool Wear[0-260]', step=1)
-        type = st.selectbox(label='Type', options=['Low', 'Medium', 'High'])
+        torque = st.number_input(label='Couple[3-80]', step=0.1)
+        tool_wear = st.number_input(label='Taux d usure[0-260]', step=1)
+        type = st.selectbox(label='Qualité', options=['Basse', 'Moyenne', 'Haute'])
 
 # Page 2
 elif option == '2 / Détails du modèle':
