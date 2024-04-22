@@ -67,6 +67,7 @@ if option == '1 / Prédictions':
         return prediction
 
 # Botton to predict
+st.markdown('WIP !!!!')
 if st.button('Predict'):
     predict = prediction(air, process, rpm, torque, tool_wear, type)
     st.success(predict)
