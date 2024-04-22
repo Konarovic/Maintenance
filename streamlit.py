@@ -66,11 +66,11 @@ if option == '1 / Prédictions':
         prediction = model.predict(df_input)
         return prediction
 
-# Botton to predict
-st.markdown('WIP !!!!')
-if st.button('Predict (WIP)'):
-    predict = prediction(air, process, rpm, torque, tool_wear, type)
-    st.success(predict)
+    # Botton to predict
+    st.markdown('WIP !!!!')
+    if st.button('Predict (WIP)'):
+        predict = prediction(air, process, rpm, torque, tool_wear, type)
+        st.success(predict)
 
 # Page 2
 elif option == '2 / Détails du modèle':
