@@ -22,3 +22,6 @@ st.write("\n\n")
 # Charger le modèle
 lgbmc_model = joblib.load('../notebook/lgbmc_model.pkl')
 
+with st.sidebar:
+    st.[Model]
+    st.[Model details]
