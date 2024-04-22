@@ -31,9 +31,9 @@ option = st.sidebar.selectbox(
 
 # Page 1
 
-"""
-pour correspondance temperature degrés en kelvin = degrés + 293.15
-"""
+
+### pour correspondance temperature degrés en kelvin = degrés + 293.15
+
 
 if option == '1 / Prédictions':
     st.write('Tableau de prédictions')
@@ -49,6 +49,27 @@ if option == '1 / Prédictions':
         torque = st.number_input(label='Couple[3-80]', step=0.1)
         tool_wear = st.number_input(label='Taux d usure[0-260]', step=1)
         type = st.selectbox(label='Qualité', options=['Basse', 'Moyenne', 'Haute'])
+
+
+    # Function to predict the input
+    def prediction(air, process, rpm, torque, tool_wear, type):
+        # Create a df with input data
+        df_input = pd.DataFrame({
+            'Air_temperature': [air],
+            'Process_temperature': [process],
+            'Rotational_speed': [rpm],
+            'Torque': [torque],
+            'Tool_wear': [tool_wear],
+            'Type': [type]
+        })
+
+        prediction = model.predict(df_input)
+        return prediction
+
+# Botton to predict
+if st.button('Predict'):
+    predict = prediction(air, process, rpm, torque, tool_wear, type)
+    st.success(predict)
 
 # Page 2
 elif option == '2 / Détails du modèle':
