@@ -23,7 +23,3 @@ option = st.sidebar.selectbox(
 )
 
 
-
-# Charger le modèle
-#lgbmc_model = joblib.load('lgbmc_model.pkl')
-
