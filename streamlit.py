@@ -101,7 +101,8 @@ if option == '1 / Prédictions':
 
         st.success(predict)
 
-    st.dataframe(data='/data/exemples_tests.csv')
+    df = pd.read_csv('data/exemples_tests.csv')
+    st.dataframe(data=df)
 
 # Page 2
 elif option == '2 / Détails du modèle':
