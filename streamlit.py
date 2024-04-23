@@ -38,9 +38,9 @@ option = st.sidebar.selectbox(
 if option == '1 / Prédictions':
     st.write('Tableau de prédictions')
    
-    col1,col2 = st.columns(2)
+    col1, col2 = st.columns(2)
 
-    with col1 :
+    with col1:
         air = st.number_input(label='Temperature de l air', step=0.1) 
         process = st.number_input(label='Temperature de fonctionnement[K]', step=0.1)
         rpm = st.number_input(label='Vitesse de rotation[rpm]', step=5)
@@ -50,26 +50,39 @@ if option == '1 / Prédictions':
         tool_wear = st.number_input(label='Taux d usure[0-260]', step=1)
         type = st.selectbox(label='Qualité', options=['Basse', 'Moyenne', 'Haute'])
 
+        # Initialisation des variables de type
+        Type_L, Type_M, Type_H = 0, 0, 0
+
+        if type == 'Basse':
+            Type_L = 1
+        elif type == 'Moyenne':
+            Type_M = 1
+        elif type == 'Haute':
+            Type_H = 1
+
+        if sum([Type_H, Type_M, Type_L]) > 1:
+            st.error("Veuillez sélectionner une seule qualité.")
 
     # Function to predict the input
-    def prediction(air, process, rpm, torque, tool_wear, type):
+    def prediction(air, process, rpm, torque, tool_wear, Type_L, Type_M, Type_H):
         # Create a df with input data
         df_input = pd.DataFrame({
-            'Air_temperature': [air],
+            'Air_Temperature': [air],
             'Process_temperature': [process],
-            'Rotational_speed': [rpm],
+            'Rotational_speed': [rpm],  # Assurez-vous que le nom de la colonne correspond à celui utilisé dans votre modèle
             'Torque': [torque],
-            'Tool_wear': [tool_wear],
-            'Type': [type]
+            'Tool_Wear': [tool_wear],
+            'Type_L': [Type_L],  
+            'Type_M': [Type_M],  
+            'Type_H': [Type_H] 
         })
 
         prediction = model.predict(df_input)
         return prediction
 
-    # Botton to predict
-    st.markdown('WIP !!!!')
-    if st.button('Predict (WIP)'):
-        predict = prediction(air, process, rpm, torque, tool_wear, type)
+    # Bouton pour prédire
+    if st.button('Predict'):
+        predict = prediction(air, process, rpm, torque, tool_wear, Type_L, Type_M, Type_H)
         st.success(predict)
 
 # Page 2
@@ -78,5 +91,3 @@ elif option == '2 / Détails du modèle':
 
     df = pd.read_csv('./data/maintenance_data_clean.csv')
     st.dataframe(data=df)
-  
-
