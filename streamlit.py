@@ -101,7 +101,7 @@ if option == '1 / Prédictions':
 
         st.success(predict)
 
-    st.write('Quelques exemples de tests')
+    st.write('Quelques exemples de tests déjà enregistrés')
     df = pd.read_csv('data/exemples_tests.csv')
     st.dataframe(data=df)
 
