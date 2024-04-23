@@ -83,6 +83,25 @@ if option == '1 / Prédictions':
     # Bouton pour prédire
     if st.button('Predict'):
         predict = prediction(air, process, rpm, torque, tool_wear, Type_L, Type_M, Type_H)
+
+        if predict == 0:
+            st.success("Probleme de temperature")
+
+        if predict == 1:
+            st.success("Pas de probleme detecté")
+
+        if predict == 2:
+            st.success("Probleme de charge")
+
+        if predict == 3:
+            st.success("Probleme de puissance")
+
+        if predict == 4:
+            st.success("Probleme d'outil")
+
+        if predict == 4:
+            st.success("Autre probleme")
+
         st.success(predict)
 
 # Page 2
