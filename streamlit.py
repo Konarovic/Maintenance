@@ -69,7 +69,7 @@ if option == '1 / Prédictions':
         df_input = pd.DataFrame({
             'Air_Temperature': [air],
             'Process_temperature': [process],
-            'Rotational_speed': [rpm],  # Assurez-vous que le nom de la colonne correspond à celui utilisé dans votre modèle
+            'Rotational_speed': [rpm],  
             'Torque': [torque],
             'Tool_Wear': [tool_wear],
             'Type_L': [Type_L],  
