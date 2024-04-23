@@ -85,7 +85,7 @@ if option == '1 / Prédictions':
         predict = prediction(air, process, rpm, torque, tool_wear, Type_L, Type_M, Type_H)
 
         if predict == 0:
-            st.success("Probleme de temperature")
+            st.success("Probleme de puissance")
 
         if predict == 1:
             st.success("Pas de probleme detecté")
@@ -94,13 +94,10 @@ if option == '1 / Prédictions':
             st.success("Probleme de charge")
 
         if predict == 3:
-            st.success("Probleme de puissance")
+            st.success("Probleme de temperature")
 
         if predict == 4:
             st.success("Probleme d'outil")
-
-        if predict == 4:
-            st.success("Autre probleme")
 
         st.success(predict)
 
