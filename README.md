@@ -35,3 +35,12 @@ conda create -p ./env -f maintenance.yml
 ### 2- Model
 
 > model/lgbmc_model.joblib
+
+### 3- Notebook
+
+- data exploration
+- dataviz
+- lazypredict / modelisation
+- Fine tunning
+
+I made some tests on dimension reduction using PCA, which could be used in conjunction with SMOTE. The final chosen model is a Light Gradient Boosting Machine classifier.
