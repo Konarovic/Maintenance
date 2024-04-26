@@ -5,18 +5,18 @@ Maintenance project based on a Kaggkle csv
 
 ├── README.md  
 |  
-├── maintenance.yml
-|
-├── requirements.txt
-|
-├── config.py
-|
-├── streamlit.py
-|
-├── model
-|
-├── notebook
-|
-├── src_
-    ├── utils
-        ├── Functions.py
+├── maintenance.yml  
+|  
+├── requirements.txt  
+|  
+├── config.py  
+|  
+├── streamlit.py  
+|  
+├── model  
+|  
+├── notebook  
+|  
+├── src  
+    ├── utils  
+        ├── Functions.py  
