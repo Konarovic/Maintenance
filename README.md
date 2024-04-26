@@ -3,9 +3,20 @@ Maintenance project based on a Kaggkle csv
 
 ## REPOSITERY
 
-├── README.md 
+├── README.md  
+|  
+├── maintenance.yml
+|
+├── requirements.txt
+|
+├── config.py
+|
+├── streamlit.py
+|
 ├── model
-├── model
+|
 ├── notebook
+|
 ├── src_
-    ├──utils
+    ├── utils
+        ├── Functions.py
