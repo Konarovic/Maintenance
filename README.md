@@ -34,4 +34,4 @@ conda create -p ./env -f maintenance.yml
 
 ### 2- Model
 
-<model/lgbmc_model.joblib>
+> model/lgbmc_model.joblib
